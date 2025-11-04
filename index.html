@@ -8,7 +8,7 @@
   <meta name="description" content="연세혜안정신건강의학과의원 | 진료시간, 오시는 길, 대표번호 안내">
   <link rel="shortcut icon" href="images/favicon.png" type="image/png">
 
-  <!-- Pretendard 폰트 추가 -->
+  <!-- Pretendard 폰트 -->
   <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/font.css" rel="stylesheet">
 
   <!-- CSS -->
@@ -17,6 +17,75 @@
   <link href="css/font-awesome.min.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
   <link href="css/responsive.css" rel="stylesheet" />
+
+  <style>
+    /* 히어로 텍스트 모바일에서 숨기기 */
+    @media (max-width: 768px) {
+      .main_hero_text {
+        display: none !important;
+      }
+    }
+
+    /* intro 영역 여백 조금 줄이고, 안쪽에서만 flex */
+    .intro-text {
+      padding: 50px 0;
+      background-color: #f9f8f7;
+    }
+
+    .intro-text .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .intro-text .text-block {
+      flex: 1 1 55%;
+      min-width: 280px;
+    }
+
+    .intro-text .image-container {
+      flex: 1 1 40%;
+      min-width: 260px;
+      text-align: center;
+    }
+
+    .intro-text .image-container img {
+      max-width: 340px;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    /* 모바일에서는 세로 정렬 + 왼쪽정렬 유지 */
+    @media (max-width: 768px) {
+      .intro-text .container {
+        flex-direction: column;
+        align-items: flex-start;   /* 왼쪽 정렬 */
+      }
+      .intro-text .text-block {
+        width: 100%;
+      }
+      .intro-text .image-container {
+        width: 100%;
+        text-align: left;
+        margin-top: 16px;
+      }
+      .intro-text .image-container img {
+        max-width: 70%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .intro-text {
+        padding: 36px 0;
+      }
+      .intro-text .image-container img {
+        max-width: 90%;
+      }
+    }
+  </style>
 </head>
 
 <body style="font-family: 'Pretendard', sans-serif;">
@@ -73,12 +142,9 @@
   </div>
 
   <!-- 소개 섹션 -->
-  <section class="intro-text" style="padding: 50px 0; background-color: #f9f8f7;">
-    <!-- flex 컨테이너 -->
-    <div class="container" style="display: flex; justify-content: space-between; align-items: center; gap: 40px;">
-
-      <!-- 텍스트 영역 -->
-      <div class="text-block" style="flex: 1;">
+  <section class="intro-text">
+    <div class="container">
+      <div class="text-block">
         <p style="font-size: 1.2rem; color: #333; line-height: 1.8; margin-bottom: 20px;">
           <strong>연세혜안정신건강의학과의원</strong>은<br>
           마음의 균형을 되찾고, 삶의 회복을 돕는 공간입니다.<br>
@@ -94,18 +160,15 @@
           정신건강의 중요성을 알고,<br>
           치유와 회복의 길을 함께 걸어가고자 합니다.
         </p>
-        <p style="font-size: 1.2rem; color: #333; line-height: 1.8; margin-bottom: 20px;">
+        <p style="font-size: 1.2rem; color: #333; line-height: 1.8; margin-bottom: 0;">
           <strong>건강한 마음, 안정된 삶을 위한 여정,<br>
           저희는 이 여정에 언제나 함께하겠습니다.</strong>
         </p>
       </div>
 
-      <!-- 이미지 영역 -->
-      <div class="image-container" style="flex: 1; text-align: center;">
-        <img src="images/light.png" alt="병원 이미지"
-             style="max-width: 340px; width: 100%; height: auto; border-radius: 10px;">
+      <div class="image-container">
+        <img src="images/light.png" alt="병원 이미지">
       </div>
-
     </div>
   </section>
 
