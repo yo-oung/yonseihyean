@@ -65,20 +65,16 @@
       color:#666; font-size:.9rem;
     }
 
-    /* ✅ 카카오맵 로고 영역 작게 정리 */
-    .map-container div[style*="padding: 7px 11px"] {
-      padding: 4px 8px !important;
-      border: none !important;
-      background: none !important;
-      text-align: right !important;
-    }
-
-    .map-container div[style*="padding: 7px 11px"] img {
-      width: 60px !important;
-      height: auto !important;
-      opacity: 0.8;
-      filter: brightness(0.95);
-    }
+    /* ✅ 카카오맵 로고 크기 강제 축소 */
+.map-container div[style*="padding: 7px 11px"] a img {
+  width: 40px !important;        /* 원하는 크기 */
+  height: auto !important;
+  max-width: none !important;
+  transform: scale(0.6);         /* 🔥 진짜 강제 축소 */
+  transform-origin: right bottom; /* 오른쪽 아래 기준으로 축소 */
+  opacity: 0.8;
+  filter: brightness(0.95);
+}
 
     /* ✅ 모바일에서 글 위, 지도 아래로 정렬 */
     @media (max-width: 768px) {
@@ -210,3 +206,4 @@
   <script type="text/javascript" src="js/custom.js"></script>
 </body>
 </html>
+
