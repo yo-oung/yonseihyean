@@ -141,7 +141,7 @@ a:focus {
 }
 
 .custom_nav-container .navbar-nav .nav-item .nav-link {
-  padding: 2px 20px;
+  padding: 5px 20px;
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
@@ -398,6 +398,11 @@ a:focus {
   /* ✅ 모바일에서 hero 안 글씨 숨기기 */
   .hero_area .main_hero_text {
     display: none !important;
+  }
+
+  /* ✅ 햄버거 메뉴 클릭 시 나오는 항목 간격 살짝 줄이기 */
+  .navbar-nav .nav-item .nav-link {
+    padding: 3px 20px !important;
   }
 
   /* intro-text는 모바일에서 세로로 */
