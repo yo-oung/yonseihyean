@@ -334,28 +334,21 @@ a:focus {
     display: none;
   }
 
-  /* 모바일 메뉴 간격 줄이기 */
-  .custom_nav-container .navbar-nav {
-    margin-top: 5px;
-  }
-
-  .custom_nav-container .navbar-nav .nav-item {
-    margin-bottom: 2px;
-  }
-
-  .custom_nav-container .navbar-nav .nav-item .nav-link {
-    padding: 4px 8px;
-    font-size: 0.9rem;
-    line-height: 1.1;
-  }
-
+  /* 타이틀(로고) 아래 메뉴 전체 간격 줄이기 */
   .navbar-collapse {
+    margin-top: 5px;    /* 타이틀과 메뉴 사이 여백 (기본은 보통 20px 이상) */
     padding-top: 0;
     padding-bottom: 0;
   }
 
-  /* ✅ 타이틀(병원 이름) 글자 크기 줄이기 */
+  /* 메뉴 항목 간 간격은 그대로 */
+  .custom_nav-container .navbar-nav .nav-item .nav-link {
+    padding: 8px 10px;
+    font-size: 0.95rem;
+  }
+
+  /* 타이틀 글자 살짝 줄이기 (선택사항) */
   .navbar-brand span {
-    font-size: 18px;  /* 기존 24px → 모바일에선 18px */
+    font-size: 18px;
   }
 }
