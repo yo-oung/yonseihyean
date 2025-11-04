@@ -170,7 +170,6 @@ a:focus {
   width: 37px;
   height: 42px;
   transition: all 0.3s;
-  position: relative;
 }
 
 .custom_nav-container .navbar-toggler span {
@@ -180,7 +179,6 @@ a:focus {
   background-color: #ffffff;
   margin: 7px 0;
   border-radius: 5px;
-  position: relative;
 }
 
 .custom_nav-container .navbar-toggler span::before,
@@ -215,12 +213,13 @@ a:focus {
 
 /* footer section */
 .footer_section {
-  background: #6F5131 !important;
-  color: #ffffff;
+  background: #6F5131 !important; /* 하단 배경색을 #6F5131로 고정 */
+  color: #ffffff; /* 텍스트 색상 */
   padding: 60px 0 15px 0;
   position: relative;
 }
 
+/* 추가된 스타일을 확인하여 모든 페이지에서 footer의 색상이 동일하게 유지되도록 */
 .footer_section h4 {
   font-weight: 600;
   margin-bottom: 20px;
@@ -330,125 +329,4 @@ a:focus {
 
 .footer_section .footer-info p a {
   color: inherit;
-}
-
-/* ============================= */
-/*   홈 intro-text 2단 레이아웃   */
-/* ============================= */
-.intro-text .container {
-  display: flex;
-  gap: 40px;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.intro-text .text-block {
-  flex: 1 1 55%;
-}
-
-.intro-text .image-container {
-  flex: 0 0 auto;
-}
-
-.intro-text .image-container img {
-  display: block;
-  max-width: 340px;
-  width: auto;
-  height: auto;
-}
-
-/* ============================= */
-/*         반응형 처리            */
-/* ============================= */
-
-/* 태블릿 이하 */
-@media (max-width: 1024px) {
-  .hero_area {
-    min-height: 80vh;
-  }
-
-  .heading_container h2 {
-    font-size: 1.6rem;
-  }
-
-  .intro-text .container {
-    gap: 24px;
-  }
-
-  .intro-text .image-container img {
-    max-width: 300px;
-  }
-}
-
-/* 일반 모바일 */
-@media (max-width: 768px) {
-  .hero_area {
-    min-height: 70vh;
-  }
-
-  .navbar-brand span {
-    font-size: 1rem;
-  }
-
-  .heading_container {
-    align-items: center;
-    text-align: center;
-  }
-
-  /* ✅ 모바일에서 hero 안 글씨 숨기기 */
-  .hero_area .main_hero_text {
-    display: none !important;
-  }
-
-  /* ✅ 햄버거 메뉴 클릭 시 나오는 항목 간격 살짝 줄이기 */
-  .navbar-nav .nav-item .nav-link {
-    padding: 3px 20px !important;
-  }
-
-  /* intro-text는 모바일에서 세로로 */
-  .intro-text .container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .intro-text .text-block {
-    width: 100%;
-  }
-
-  .intro-text .image-container img {
-    max-width: 70%;
-    margin-top: 16px;
-  }
-
-  .footer_section .footer_links {
-    justify-content: center;
-  }
-
-  .footer_section .footer_col {
-    text-align: center;
-  }
-}
-
-/* 아주 작은 모바일 */
-@media (max-width: 480px) {
-  .hero_area {
-    min-height: 60vh;
-  }
-
-  .heading_container h2 {
-    font-size: 1.4rem;
-  }
-
-  .intro-text .image-container img {
-    max-width: 90%;
-  }
-
-  .footer_section {
-    padding: 40px 0 10px 0;
-  }
-
-  .footer_section .footer-info p {
-    padding: 15px 0;
-  }
 }
