@@ -219,7 +219,6 @@ a:focus {
   position: relative;
 }
 
-/* 추가된 스타일을 확인하여 모든 페이지에서 footer의 색상이 동일하게 유지되도록 */
 .footer_section h4 {
   font-weight: 600;
   margin-bottom: 20px;
@@ -329,4 +328,13 @@ a:focus {
 
 .footer_section .footer-info p a {
   color: inherit;
+}
+
+/* ===============================
+   모바일 전용: hero 텍스트 숨기기
+   =============================== */
+@media (max-width: 768px) {
+  .main_hero_text {
+    display: none;
+  }
 }
