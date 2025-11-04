@@ -82,16 +82,25 @@
 /* ===============================
    모바일 메뉴 여백 조정
    =============================== */
+/* responsive.css 맨 아래에 추가 */
 @media (max-width: 768px) {
-  /* 타이틀 밑 메뉴 간격 약간 띄우기 */
+
+  /* 1) 모바일에서 헤더(navbar) 아래 여백 줄이기 */
+  .header_section .navbar,
+  .header_section .navbar.navbar-expand-lg,
+  .header_section .custom_nav-container.navbar {
+    padding-bottom: 0 !important;  /* 기본 navbar 아래 패딩 제거 */
+  }
+
+  /* 2) 실제로 메뉴가 펼쳐진 상태일 때 간격 조정 */
   .header_section .navbar-collapse,
   .header_section .navbar-collapse.show,
   .header_section .navbar-collapse.collapse.show {
-    margin-top: 5px !important;   /* 살짝 띄움 (자연스럽게) */
+    margin-top: 5px !important;    /* ← "살짝" 띄운 버전 */
     padding-top: 0 !important;
   }
 
-  /* 메뉴 리스트 자체 위 여백 제거 */
+  /* 3) 메뉴 리스트 자체 위쪽 여백도 없애기 */
   .header_section .navbar-collapse .navbar-nav {
     margin-top: 0 !important;
   }
