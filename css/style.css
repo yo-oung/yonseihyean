@@ -395,6 +395,11 @@ a:focus {
     text-align: center;
   }
 
+  /* ✅ 모바일에서 hero 안 글씨 숨기기 */
+  .hero_area .main_hero_text {
+    display: none !important;
+  }
+
   /* intro-text는 모바일에서 세로로 */
   .intro-text .container {
     flex-direction: column;
