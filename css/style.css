@@ -7,38 +7,17 @@ body {
   overflow-x: hidden;
 }
 
-.layout_padding {
-  padding: 90px 0;
-}
+/* 공통 여백 */
+.layout_padding { padding: 90px 0; }
+.layout_padding2 { padding: 75px 0; }
+.layout_padding2-top { padding-top: 75px; }
+.layout_padding2-bottom { padding-bottom: 75px; }
+.layout_padding-top { padding-top: 90px; }
+.layout_padding-bottom { padding-bottom: 90px; }
+.layout_margin-top { margin-top: 90px; }
+.layout_margin-bottom { margin-bottom: 90px; }
 
-.layout_padding2 {
-  padding: 75px 0;
-}
-
-.layout_padding2-top {
-  padding-top: 75px;
-}
-
-.layout_padding2-bottom {
-  padding-bottom: 75px;
-}
-
-.layout_padding-top {
-  padding-top: 90px;
-}
-
-.layout_padding-bottom {
-  padding-bottom: 90px;
-}
-
-.layout_margin-top {
-  margin-top: 90px;
-}
-
-.layout_margin-bottom {
-  margin-bottom: 90px;
-}
-
+/* 제목 */
 .heading_container {
   display: flex;
   flex-direction: column;
@@ -46,7 +25,6 @@ body {
 }
 
 .heading_container h2 {
-  position: relative;
   font-weight: bold;
   margin-bottom: 0;
   text-transform: uppercase;
@@ -62,24 +40,21 @@ body {
   text-align: center;
 }
 
-a,
-a:hover,
-a:focus {
+/* 링크 */
+a, a:hover, a:focus {
   text-decoration: none;
+  color: inherit;
 }
 
-a:hover,
-a:focus {
-  color: initial;
-}
-
-.btn,
-.btn:focus {
+/* 버튼 */
+.btn, .btn:focus {
   outline: none !important;
   box-shadow: none;
 }
 
-/* header section */
+/* =============================== */
+/*           HEADER HERO           */
+/* =============================== */
 .hero_area {
   position: relative;
   min-height: 100vh;
@@ -120,11 +95,6 @@ a:focus {
   padding: 15px 0;
 }
 
-.header_section .container-fluid {
-  padding-right: 25px;
-  padding-left: 25px;
-}
-
 .navbar-brand span {
   font-weight: bold;
   font-size: 24px;
@@ -132,10 +102,7 @@ a:focus {
   text-transform: uppercase;
 }
 
-.custom_nav-container {
-  padding: 0;
-}
-
+/* nav */
 .custom_nav-container .navbar-nav {
   margin-left: auto;
 }
@@ -143,33 +110,15 @@ a:focus {
 .custom_nav-container .navbar-nav .nav-item .nav-link {
   padding: 5px 20px;
   color: #ffffff;
-  text-align: center;
   text-transform: uppercase;
   border-radius: 5px;
   transition: all 0.3s;
 }
 
-.custom_nav-container .nav_search-btn {
-  width: 35px;
-  height: 35px;
-  padding: 0;
-  border: none;
-  color: #ffffff;
-}
-
-.custom_nav-container .nav_search-btn:hover {
-  color: #62d2a2;
-}
-
+/* 햄버거 */
 .custom_nav-container .navbar-toggler {
-  outline: none;
-}
-
-.custom_nav-container .navbar-toggler {
-  padding: 0;
   width: 37px;
   height: 42px;
-  transition: all 0.3s;
   position: relative;
 }
 
@@ -180,45 +129,15 @@ a:focus {
   background-color: #ffffff;
   margin: 7px 0;
   border-radius: 5px;
-  position: relative;
 }
 
-.custom_nav-container .navbar-toggler span::before,
-.custom_nav-container .navbar-toggler span::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #ffffff;
-  top: -10px;
-  border-radius: 5px;
-}
-
-.custom_nav-container .navbar-toggler span::after {
-  top: 10px;
-}
-
-.custom_nav-container .navbar-toggler[aria-expanded="true"] {
-  transform: rotate(360deg);
-}
-
-.custom_nav-container .navbar-toggler[aria-expanded="true"] span {
-  transform: rotate(45deg);
-}
-
-.custom_nav-container .navbar-toggler[aria-expanded="true"] span::before,
-.custom_nav-container .navbar-toggler[aria-expanded="true"] span::after {
-  transform: rotate(90deg);
-  top: 0;
-}
-
-/* footer section */
+/* =============================== */
+/*             FOOTER              */
+/* =============================== */
 .footer_section {
   background: #6F5131 !important;
   color: #ffffff;
   padding: 60px 0 15px 0;
-  position: relative;
 }
 
 .footer_section h4 {
@@ -226,96 +145,14 @@ a:focus {
   margin-bottom: 20px;
 }
 
-.footer_section .footer_col {
-  margin-bottom: 30px;
-}
-
-.footer_section .footer_contact .contact_link_box {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer_section .footer_contact .contact_link_box a {
-  margin: 5px 0;
-  color: #ffffff;
-}
-
-.footer_section .footer_contact .contact_link_box a i {
-  margin-right: 5px;
-}
-
-.footer_section .footer_contact .contact_link_box a:hover {
-  color: #E9D9CD;
-}
-
-.footer_section .footer_social {
-  display: flex;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-.footer_section .footer_social a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  border-radius: 100%;
-  margin-right: 10px;
-  font-size: 24px;
-}
-
-.footer_section .footer_social a:hover {
-  color: #6F5131;
-}
-
-.footer_section .footer_links {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .footer_section .footer_links a {
-  display: flex;
-  align-items: center;
   margin-right: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: #ffffff;
 }
 
 .footer_section .footer_links a:hover {
   color: #E9D9CD;
-}
-
-.footer_section form input {
-  border: none;
-  background-color: #fefefe;
-  width: 100%;
-  height: 45px;
-  color: #000000;
-  outline: none;
-  border-radius: 5px;
-  padding: 0 15px;
-}
-
-.footer_section form input::placeholder {
-  color: #777;
-}
-
-.footer_section form button {
-  width: 100%;
-  text-align: center;
-  display: inline-block;
-  padding: 10px 55px;
-  background-color: #755D42;
-  color: #ffffff;
-  border-radius: 5px;
-  border: 1px solid #755D42;
-  margin-top: 15px;
-  transition: all 0.3s;
-}
-
-.footer_section form button:hover {
-  background-color: transparent;
-  color: #6F5131;
 }
 
 .footer_section .footer-info {
@@ -328,13 +165,9 @@ a:focus {
   margin: 0;
 }
 
-.footer_section .footer-info p a {
-  color: inherit;
-}
-
-/* ============================= */
-/*   홈 intro-text 2단 레이아웃   */
-/* ============================= */
+/* =============================== */
+/*           INTRO 섹션            */
+/* =============================== */
 .intro-text .container {
   display: flex;
   gap: 40px;
@@ -357,22 +190,22 @@ a:focus {
   height: auto;
 }
 
-/* ============================= */
-/*         반응형 처리            */
-/* ============================= */
-
-/* 태블릿 이하 */
+/* =============================== */
+/*       HERO 글자 반응형 조정     */
+/* =============================== */
 @media (max-width: 1024px) {
   .hero_area {
     min-height: 80vh;
   }
 
-  .heading_container h2 {
-    font-size: 1.6rem;
+  .hero_area .main_hero_text h1,
+  .hero_area .main_hero_text h2 {
+    font-size: 2.4rem !important;
+    line-height: 1.4 !important;
   }
 
-  .intro-text .container {
-    gap: 24px;
+  .hero_area .main_hero_text p {
+    font-size: 1.1rem !important;
   }
 
   .intro-text .image-container img {
@@ -380,54 +213,55 @@ a:focus {
   }
 }
 
-/* 일반 모바일 */
 @media (max-width: 768px) {
   .hero_area {
     min-height: 70vh;
   }
 
-  .navbar-brand span {
-    font-size: 1rem;
+  .hero_area .main_hero_text h1,
+  .hero_area .main_hero_text h2 {
+    font-size: 2rem !important;
+    line-height: 1.3 !important;
   }
 
-  .heading_container {
-    align-items: center;
-    text-align: center;
+  .hero_area .main_hero_text p {
+    font-size: 1rem !important;
   }
 
-  /* intro-text는 모바일에서 세로로 */
+  .main_hero_text {
+    width: 90%;
+  }
+
+  /* intro: 세로 정렬 */
   .intro-text .container {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
-  .intro-text .text-block {
-    width: 100%;
-  }
-
   .intro-text .image-container img {
     max-width: 70%;
-    margin-top: 16px;
+    margin-top: 20px;
   }
 
-  .footer_section .footer_links {
-    justify-content: center;
-  }
-
-  .footer_section .footer_col {
+  .footer_section {
     text-align: center;
   }
 }
 
-/* 아주 작은 모바일 */
 @media (max-width: 480px) {
   .hero_area {
     min-height: 60vh;
   }
 
-  .heading_container h2 {
-    font-size: 1.4rem;
+  .hero_area .main_hero_text h1,
+  .hero_area .main_hero_text h2 {
+    font-size: 1.6rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .hero_area .main_hero_text p {
+    font-size: 0.9rem !important;
   }
 
   .intro-text .image-container img {
@@ -436,30 +270,5 @@ a:focus {
 
   .footer_section {
     padding: 40px 0 10px 0;
-  }
-
-  .footer_section .footer-info p {
-    padding: 15px 0;
-  }
-}
-/* 모바일에서 메인 슬로건 글자 줄이기 */
-@media (max-width: 768px) {
-  .main_hero_text h1 {
-    font-size: 2.1rem !important;   /* 원래 3.5rem → 모바일용으로 축소 */
-    line-height: 1.3;
-  }
-
-  .main_hero_text p {
-    font-size: 1rem !important;
-  }
-}
-
-/* 아주 작은 화면 */
-@media (max-width: 480px) {
-  .main_hero_text h1 {
-    font-size: 1.7rem !important;
-  }
-  .main_hero_text p {
-    font-size: 0.9rem !important;
   }
 }
