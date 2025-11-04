@@ -247,11 +247,6 @@ a, a:hover, a:focus {
   .footer_section {
     text-align: center;
   }
-
-  /* ✅ 모바일에서 hero 내부 글자 숨김 */
-  .hero_area .main_hero_text {
-    display: none !important;
-  }
 }
 
 @media (max-width: 480px) {
