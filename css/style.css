@@ -328,38 +328,34 @@ a:focus {
   color: inherit;
 }
 
-/* ===============================
-   모바일 전용 스타일
-   =============================== */
 @media (max-width: 768px) {
   /* hero 텍스트 숨기기 */
   .main_hero_text {
     display: none;
   }
 
-@media (max-width: 768px) {
-  /* hero 텍스트 숨기기 */
-  .main_hero_text {
-    display: none;
-  }
-
-  /* ✅ 모바일 메뉴 간격 확 줄이기 */
+  /* 모바일 메뉴 간격 줄이기 */
   .custom_nav-container .navbar-nav {
-    margin-top: 5px;      /* 메뉴 전체 위쪽 여백 줄이기 */
+    margin-top: 5px;
   }
 
   .custom_nav-container .navbar-nav .nav-item {
-    margin-bottom: 2px;   /* 각 항목 사이 간격 줄이기 */
+    margin-bottom: 2px;
   }
 
   .custom_nav-container .navbar-nav .nav-item .nav-link {
-    padding: 4px 8px;     /* 위아래·좌우 여백 줄이기 */
-    font-size: 0.9rem;    /* 글자도 살짝 작게 */
-    line-height: 1.1;     /* 세로 간격도 줄이기 */
+    padding: 4px 8px;
+    font-size: 0.9rem;
+    line-height: 1.1;
   }
 
   .navbar-collapse {
     padding-top: 0;
     padding-bottom: 0;
+  }
+
+  /* ✅ 타이틀(병원 이름) 글자 크기 줄이기 */
+  .navbar-brand span {
+    font-size: 18px;  /* 기존 24px → 모바일에선 18px */
   }
 }
