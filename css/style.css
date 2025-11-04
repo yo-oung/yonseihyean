@@ -334,20 +334,23 @@ a:focus {
     display: none;
   }
 
-  /* 타이틀(로고) 아래 메뉴 전체 간격 줄이기 */
+  /* 타이틀 아래 메뉴 간 살짝 띄우기 (자연스럽게) */
   .navbar-collapse {
-    margin-top: 5px;    /* 타이틀과 메뉴 사이 여백 (기본은 보통 20px 이상) */
+    margin-top: 5px;   /* 살짝 띄움 */
     padding-top: 0;
-    padding-bottom: 0;
   }
 
-  /* 메뉴 항목 간 간격은 그대로 */
+  .custom_nav-container .navbar-nav {
+    margin-top: 5px;   /* 메뉴 리스트도 살짝 아래로 */
+  }
+
+  /* 메뉴 항목 간 기본 간격 유지 */
   .custom_nav-container .navbar-nav .nav-item .nav-link {
     padding: 8px 10px;
     font-size: 0.95rem;
   }
 
-  /* 타이틀 글자 살짝 줄이기 (선택사항) */
+  /* 타이틀(로고 텍스트) 글자 조금 줄이기 */
   .navbar-brand span {
     font-size: 18px;
   }
