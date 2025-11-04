@@ -65,6 +65,21 @@
       color:#666; font-size:.9rem;
     }
 
+    /* ✅ 카카오맵 로고 영역 작게 정리 */
+    .map-container div[style*="padding: 7px 11px"] {
+      padding: 4px 8px !important;
+      border: none !important;
+      background: none !important;
+      text-align: right !important;
+    }
+
+    .map-container div[style*="padding: 7px 11px"] img {
+      width: 60px !important;
+      height: auto !important;
+      opacity: 0.8;
+      filter: brightness(0.95);
+    }
+
     /* ✅ 모바일에서 글 위, 지도 아래로 정렬 */
     @media (max-width: 768px) {
       .contact-section-wrapper {
@@ -167,7 +182,7 @@
                   <img class="map" src="http://t1.daumcdn.net/roughmap/imgmap/0bed58dfdf7c6ca02fd8bafd4ad9e9fce0593ccf1e377dfc1770c6a91399d36a" width="638px" height="358px" style="border:1px solid #ccc;">
                 </a>
               </div>
-              <div style="overflow: hidden; padding: 7px 11px; border: 1px solid rgba(0, 0, 0, 0.1); background-color: rgb(249, 249, 249);">
+              <div style="overflow:hidden; padding:7px 11px; border:1px solid rgba(0,0,0,0.1); background-color:#f9f9f9;">
                 <a href="https://map.kakao.com" target="_blank">
                   <img src="https://t1.daumcdn.net/localimg/localimages/07/2018/pc/common/logo_kakaomap.png" width="72" height="16" alt="카카오맵">
                 </a>
