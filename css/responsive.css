@@ -76,4 +76,23 @@
   .container {
     max-width: 1170px;
   }
+
+}
+
+/* ===============================
+   모바일 메뉴 여백 조정
+   =============================== */
+@media (max-width: 768px) {
+  /* 타이틀 밑 메뉴 간격 약간 띄우기 */
+  .header_section .navbar-collapse,
+  .header_section .navbar-collapse.show,
+  .header_section .navbar-collapse.collapse.show {
+    margin-top: 5px !important;   /* 살짝 띄움 (자연스럽게) */
+    padding-top: 0 !important;
+  }
+
+  /* 메뉴 리스트 자체 위 여백 제거 */
+  .header_section .navbar-collapse .navbar-nav {
+    margin-top: 0 !important;
+  }
 }
