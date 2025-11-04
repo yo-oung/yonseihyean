@@ -163,15 +163,13 @@ a:focus {
 
 .custom_nav-container .navbar-toggler {
   outline: none;
-}
-
-.custom_nav-container .navbar-toggler {
   padding: 0;
   width: 37px;
   height: 42px;
   transition: all 0.3s;
 }
 
+/* ✅ 햄버거 아이콘 수정 */
 .custom_nav-container .navbar-toggler span {
   display: block;
   width: 35px;
@@ -179,6 +177,7 @@ a:focus {
   background-color: #ffffff;
   margin: 7px 0;
   border-radius: 5px;
+  position: relative; /* ← before/after 기준점 설정 */
 }
 
 .custom_nav-container .navbar-toggler span::before,
@@ -189,16 +188,15 @@ a:focus {
   height: 100%;
   width: 100%;
   background-color: #ffffff;
-  top: -10px;
   border-radius: 5px;
+}
+
+.custom_nav-container .navbar-toggler span::before {
+  top: -10px;
 }
 
 .custom_nav-container .navbar-toggler span::after {
   top: 10px;
-}
-
-.custom_nav-container .navbar-toggler[aria-expanded="true"] {
-  transform: rotate(360deg);
 }
 
 .custom_nav-container .navbar-toggler[aria-expanded="true"] span {
@@ -213,8 +211,8 @@ a:focus {
 
 /* footer section */
 .footer_section {
-  background: #6F5131 !important; /* 하단 배경색을 #6F5131로 고정 */
-  color: #ffffff; /* 텍스트 색상 */
+  background: #6F5131 !important; /* 하단 배경색 고정 */
+  color: #ffffff;
   padding: 60px 0 15px 0;
   position: relative;
 }
