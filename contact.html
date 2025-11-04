@@ -65,17 +65,32 @@
       color:#666; font-size:.9rem;
     }
 
-    /* ✅ 카카오맵 로고 크기 강제 축소 */
-.map-container div[style*="padding: 7px 11px"] a img {
-  width: 40px !important;        /* 원하는 크기 */
-  height: auto !important;
-  max-width: none !important;
-  transform: scale(0.6);         /* 🔥 진짜 강제 축소 */
-  transform-origin: right bottom; /* 오른쪽 아래 기준으로 축소 */
-  opacity: 0.8;
-  filter: brightness(0.95);
+/* ✅ 카카오맵 로고를 지도 위 오른쪽 아래로 작게 표시 */
+.map-container div[style*="padding: 7px 11px"] {
+  position: absolute !important;
+  bottom: 8px;
+  right: 8px;
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  z-index: 5;
 }
 
+.map-container div[style*="padding: 7px 11px"] a img {
+  width: 40px !important;        /* 🔹 원하는 크기 조정: 30~50px 추천 */
+  height: auto !important;
+  max-width: none !important;
+  transform: scale(0.7);         /* 🔹 진짜 강제 축소 */
+  transform-origin: right bottom;
+  opacity: 0.7;
+  filter: brightness(0.9);
+}
+
+/* 지도 부모요소가 relative 되어야 overlay 가능 */
+.map-container {
+  position: relative;
+}
+    
     /* ✅ 모바일에서 글 위, 지도 아래로 정렬 */
     @media (max-width: 768px) {
       .contact-section-wrapper {
@@ -206,4 +221,5 @@
   <script type="text/javascript" src="js/custom.js"></script>
 </body>
 </html>
+
 
