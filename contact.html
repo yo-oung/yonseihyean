@@ -13,7 +13,6 @@
 
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
   <link href="css/font-awesome.min.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
   <link href="css/responsive.css" rel="stylesheet" />
@@ -53,11 +52,7 @@
     .map-container {
       width: 100%;
       max-width: 50%;
-    }
-
-    .map-container img {
-      width: 100%;
-      height: auto;
+      position: relative;
     }
 
     footer.footer_section {
@@ -65,58 +60,95 @@
       color:#666; font-size:.9rem;
     }
 
-/* ✅ 카카오맵 로고를 지도 위 오른쪽 아래로 작게 표시 */
-.map-container div[style*="padding: 7px 11px"] {
-  position: absolute !important;
-  bottom: 8px;
-  right: 8px;
-  background: none !important;
-  border: none !important;
-  padding: 0 !important;
-  z-index: 5;
-}
-
-.map-container div[style*="padding: 7px 11px"] a img {
-  width: 40px !important;        /* 🔹 원하는 크기 조정: 30~50px 추천 */
-  height: auto !important;
-  max-width: none !important;
-  transform: scale(0.7);         /* 🔹 진짜 강제 축소 */
-  transform-origin: right bottom;
-  opacity: 0.7;
-  filter: brightness(0.9);
-}
-
-/* 지도 부모요소가 relative 되어야 overlay 가능 */
-.map-container {
-  position: relative;
-}
-    
-    /* ✅ 모바일에서 글 위, 지도 아래로 정렬 */
+    /* 모바일에서 글 위, 지도 아래로 정렬 */
     @media (max-width: 768px) {
       .contact-section-wrapper {
-        flex-direction: column;          /* 세로로 쌓기 */
+        flex-direction: column;
       }
 
       .contact-info,
       .map-container {
-        max-width: 100%;                 /* 전체 폭 차지 */
+        max-width: 100%;
       }
 
-      /* 지도 위에 여백 약간 */
       .map-container {
         margin-top: 20px;
       }
 
-      /* 카카오맵 고정폭 깨뜨리기 */
-      .map-container > div {
-        width: 100% !important;
-        max-width: 100% !important;
-      }
-
-      .map-container img.map {
+      .map-container img {
         width: 100% !important;
         height: auto !important;
       }
+
+      /* PC용 지도 숨기기 */
+      .pc-map {
+        display: none;
+      }
+
+      /* 모바일용 지도 보이기 */
+      .mobile-map {
+        display: block;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .map-container {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        width: 335px;
+      }
+
+      .map-container img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      /* 지도 하단의 버튼 스타일 */
+      .map-container div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 7px 11px;
+        border-top: 1px solid #ccc;
+        background-color: rgb(249, 249, 249);
+      }
+
+      .map-container a {
+        color: #000;
+        text-decoration: none;
+        font-size: 12px;
+        padding: 5px 10px;
+        margin: 5px 0;
+      }
+
+      .map-container a:hover {
+        color: #d0d0d0;
+      }
+
+      /* 카카오맵 로고 크기 조정 */
+      .map-container img {
+        width: 72px;
+        height: 16px;
+      }
+    }
+
+    /* PC 화면에서만 모바일용 지도 숨기기 */
+    .mobile-map {
+      display: none;
+    }
+
+    /* PC 화면에서만 지도 보이기 */
+    .pc-map {
+      display: block;
     }
   </style>
 </head>
@@ -154,8 +186,8 @@
 
     <!-- Hero Text -->
     <section class="main_hero_text">
-      <h1>오시는 길</h1>
-      <p>연세혜안정신건강의학과의원</p>
+      <h1 style="font-size: 3rem; font-weight: 700; text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.5);">오시는 길</h1>
+      <p style="margin-top: 15px; font-size: 1.2rem; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);">연세혜안정신건강의학과의원</p>
     </section>
   </div>
 
@@ -185,21 +217,35 @@
             <p style="margin-top:10px;">* 점심시간: 13:00 ~ 14:00<br>* 일요일 및 공휴일 휴진<br>* 건물 뒷편 주차장 운영 (주차권 제공)</p>
           </div>
 
-          <!-- 지도 -->
-          <div class="map-container">
-            <div style="font:normal normal 400 12px/normal dotum, sans-serif; width:640px; height:392px; color:#333; position:relative">
-              <div style="height: 360px;">
-                <a href="https://map.kakao.com/?urlX=521435.0000000024&amp;urlY=1141040.9999999986&amp;itemId=1861222550" target="_blank">
-                  <img class="map" src="http://t1.daumcdn.net/roughmap/imgmap/0bed58dfdf7c6ca02fd8bafd4ad9e9fce0593ccf1e377dfc1770c6a91399d36a" width="638px" height="358px" style="border:1px solid #ccc;">
-                </a>
-              </div>
-              <div style="overflow:hidden; padding:7px 11px; border:1px solid rgba(0,0,0,0.1); background-color:#f9f9f9;">
-                <a href="https://map.kakao.com" target="_blank">
-                  <img src="https://t1.daumcdn.net/localimg/localimages/07/2018/pc/common/logo_kakaomap.png" width="72" height="16" alt="카카오맵">
-                </a>
-              </div>
-            </div>
-          </div>
+<!-- PC용 지도 -->
+<div class="map-container pc-map">
+  <div style="font:normal 12px dotum,sans-serif; width:640px; height:392px; position:relative;">
+    <div style="height:360px;">
+      <a href="https://map.kakao.com/?urlX=521435.0000000024&amp;urlY=1141040.9999999986&amp;itemId=1861222550" target="_blank">
+        <img src="http://t1.daumcdn.net/roughmap/imgmap/0bed58dfdf7c6ca02fd8bafd4ad9e9fce0593ccf1e377dfc1770c6a91399d36a"
+             width="638" height="358" style="border:1px solid #ccc;">
+      </a>
+    </div>
+    <div style="overflow:hidden; padding:7px 11px; border:1px solid rgba(0,0,0,.1); background:#f9f9f9;">
+      <a href="https://map.kakao.com" target="_blank">
+        <img src="https://t1.daumcdn.net/localimg/localimages/07/2018/pc/common/logo_kakaomap.png" alt="카카오맵">
+      </a>
+    </div>
+  </div>
+</div>
+
+<!--  모바일용 지도 (세로가 더 긴 버전) -->
+<div class="map-container mobile-map">
+  <div class="kakao-box">
+    <a href="...">
+      <img src="http://t1.daumcdn.net/roughmap/imgmap/5ffab002cd73203c61502c5a9c3da9eade842823ab85205b215624a27edf02b2" alt="">
+    </a>
+    <div class="kakao-bottom">
+      <img src="https://t1.daumcdn.net/localimg/localimages/07/2018/pc/common/logo_kakaomap.png" width="72" height="16" alt="kakaomap">
+    </div>
+  </div>
+</div>
+
         </div>
       </section>
     </div>
@@ -221,5 +267,3 @@
   <script type="text/javascript" src="js/custom.js"></script>
 </body>
 </html>
-
-
