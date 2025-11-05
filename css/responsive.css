@@ -1,5 +1,5 @@
 /* ================================
-   기본 스타일
+   기본 스타일 보강
    ================================ */
 .hero_area .hero_bg_box {
   top: 0;
@@ -10,7 +10,7 @@
 .hero_area .hero_bg_box img {
   object-position: center top;
   object-fit: cover;
-  transition: transform 0.3s ease-in-out !important; /* 배경 이미지에 부드러운 애니메이션 효과 추가 */
+  transition: transform 0.3s ease-in-out !important;
 }
 
 .container {
@@ -28,30 +28,31 @@
 }
 
 /* ================================
-   모바일 전용: 타이틀 밑 메뉴 간격 조정
+   모바일 전용 (768px 이하)
    ================================ */
 @media (max-width: 768px) {
-  /* 메뉴가 펼쳐졌을 때 배경 이미지 확대 */
+  /* 메뉴 열렸을 때 배경 확대 */
   .navbar-collapse.show ~ .hero_area .hero_bg_box {
-    transform: scale(1.2); /* 배경 이미지 확대 */
-    transition: transform 0.3s ease-in-out !important; /* 부드럽게 확대되도록 설정 */
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out !important;
   }
 
-  /* 메뉴가 접혔을 때는 원래 크기 유지 */
+  /* 메뉴 닫혔을 때 원래 크기 */
   .navbar-collapse.collapse ~ .hero_area .hero_bg_box {
-    transform: scale(1); /* 배경 이미지를 원래 크기로 */
+    transform: scale(1);
   }
 
+  /* 배경을 뒤로 보내서 메뉴가 위에 오게 */
   .hero_area .hero_bg_box {
     z-index: -1;
   }
 
-  /* 모바일 타이틀 크기 */
+  /* 모바일 로고/타이틀 크기 */
   .navbar-brand span {
     font-size: 18px;
   }
 
-  /* 모바일 메뉴 항목 간 간격 줄이기 */
+  /* 모바일 메뉴 간격 줄이기 */
   .navbar-nav .nav-item {
     margin: 2px 0 !important;
   }
@@ -61,38 +62,32 @@
     line-height: 1.2;
   }
 
-  /* 메뉴가 펼쳐졌을 때 hero 영역 배경을 조금 더 아래로 확장 */
+  /* 메뉴 열렸을 때 배경이미지 높이 조금 더 */
   .navbar-collapse.show ~ .hero_area .hero_bg_box img {
     height: 130vh !important;
     object-position: center top;
   }
 
-  /* 모바일 메뉴 마지막 항목(오시는 길) 아래 여백 추가 */
+  /* 마지막 메뉴(오시는 길) 아래 여백 */
   .navbar-nav .nav-item:last-child {
     margin-bottom: 40px !important;
   }
 
-  /* 모바일용 타이틀 사이 간격 조정 */
+  /* 문의/컨택 영역 제목 간격 */
   .contact_section .heading_container h2 {
     margin-top: 10px;
   }
-}
 
-  /* 메뉴가 펼쳐졌을 때 hero 영역 배경을 조금 더 아래로 확장 */
-  .navbar-collapse.show ~ .hero_area .hero_bg_box img {
-    height: 130vh !important;
-    object-position: center top;
-  }
-
-  /* 모바일 메뉴 마지막 항목(오시는 길) 아래 여백 추가 */
-  .navbar-nav .nav-item:last-child {
-    margin-bottom: 40px !important;
+  /* ✅ 모바일에서 hero 영역 글자 숨기기 */
+  .hero_area .main_hero_text,
+  .hero_area .main_hero_text * {
+    display: none !important;
   }
 }
 
 /* ================================
-   서브페이지에서는 hero 강제로 다시 숨기기
-   (지금 문제났던 doctors.html 같은 페이지)
+   서브페이지에서는 hero 다시 숨기기
+   (doctors.html 같은 페이지)
    ================================ */
 .sub_page .hero_area {
   min-height: auto;
@@ -100,6 +95,5 @@
 }
 
 .sub_page .hero_area .hero_bg_box {
-  display: none !important;  /* 이게 핵심 */
+  display: none !important; /* 이게 핵심 */
 }
-
