@@ -327,16 +327,3 @@ a:focus {
 .footer_section .footer-info p a {
   color: inherit;
 }
-
-/* ===============================
-   모바일 전용 스타일
-   =============================== */
-@media (max-width: 768px) {
-  .main_hero_text {
-    display: none; /* 모바일에서 hero 글자 숨김 */
-  }
-
-  .navbar-brand span {
-    font-size: 18px; /* 타이틀 글자 조금 줄임 */
-  }
-}
