@@ -97,3 +97,13 @@
 .sub_page .hero_area .hero_bg_box {
   display: none !important; /* 이게 핵심 */
 }
+
+@media (max-width: 768px) {
+  /* ...네가 이미 써둔 모바일 코드들... */
+
+  /* hero 메인 글자 숨기기 */
+  .main_hero_text {
+    display: none !important;
+  }
+}
+
