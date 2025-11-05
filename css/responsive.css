@@ -4,10 +4,7 @@
     left: 0;
     width: 100%;
   }
-
 }
-
-@media (max-width: 1120px) {}
 
 @media (max-width: 992px) {
   .hero_area {
@@ -35,7 +32,6 @@
 }
 
 @media (max-width: 767px) {
-
   .about_section .img-box {
     margin-bottom: 30px;
   }
@@ -52,6 +48,23 @@
     -o-object-position: center top;
     object-position: center top;
   }
+
+  /* 모바일 지도 크기 및 위치 */
+  .map-container {
+    width: 335px;
+    height: auto;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .map-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
 }
 
 @media (max-width: 576px) {}
@@ -66,6 +79,12 @@
     padding-left: 10px;
     padding-right: 10px;
   }
+
+  /* 모바일용 지도 크기 */
+  .map-container {
+    width: 280px;
+    height: auto;
+  }
 }
 
 @media (max-width: 420px) {}
@@ -76,18 +95,35 @@
   .container {
     max-width: 1170px;
   }
-
 }
 
 /* ===============================
    모바일 전용: 타이틀 밑 메뉴 간격 조정
    =============================== */
+/* 메뉴가 펼쳐졌을 때 */
 @media (max-width: 768px) {
-  /* 메뉴가 펼쳐질 때만 적용 */
-  .header_section .navbar-collapse.collapse.show {
-    margin-top: 5px !important;   /* 타이틀 밑 여백 (자연스럽게) */
-    padding-top: 0 !important;
+  .navbar-collapse.show ~ .hero_area .hero_bg_box {
+    /* 배경 이미지를 확대 */
+    transform: scale(1); /* 확대 비율 (1보다 크면 확대, 1이면 원래 크기) */
+    transition: transform 0.3s ease-in-out !important; /* 배경이 부드럽게 확대되도록 설정 */
   }
+
+  .hero_area .hero_bg_box {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover; /* 배경 이미지가 화면을 꽉 채우도록 설정 */
+  }
+}
+
+/* 메뉴가 접혔을 때는 원래 크기 유지 */
+@media (max-width: 768px) {
+  .navbar-collapse.collapse {
+    transform: none; /* 메뉴 접혔을 때 배경 이미지가 확대되지 않도록 */
+  }
+}
 
   /* 메뉴 리스트 자체 여백 제거 */
   .header_section .navbar-collapse .navbar-nav {
@@ -97,5 +133,33 @@
   /* 타이틀 크기 살짝 줄이기 */
   .navbar-brand span {
     font-size: 18px;
+  }
+
+  /* 모바일용 타이틀 사이 간격 조정 */
+  .contact_section .heading_container h2 {
+    margin-top: 10px;
+  }
+
+  /* 모바일 메뉴 항목 간 간격 줄이기 */
+  .navbar-nav .nav-item {
+    margin: 2px 0 !important; /* 위아래 간격 2px로 */
+  }
+
+  .navbar-nav .nav-link {
+    padding: 3px 0 !important;
+    line-height: 1.2;
+  }
+
+  /* 햄버거 메뉴가 펼쳐졌을 때 hero 영역 배경을 조금 더 아래로 확장 */
+  .navbar-collapse.show ~ .hero_area .hero_bg_box img {
+    height: 130vh !important; /* 배경 이미지를 화면 높이의 130%로 늘림 */
+    object-fit: cover;
+    object-position: center top;
+  }
+
+@media (max-width: 768px) {
+  /* 모바일 메뉴 마지막 항목(오시는 길) 아래 여백 추가 */
+  .navbar-nav .nav-item:last-child {
+    margin-bottom: 40px !important; /* 원하는 만큼 조정 (예: 40px, 60px 등) */
   }
 }
