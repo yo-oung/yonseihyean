@@ -526,6 +526,11 @@ a:focus {
     display: none; /* 모바일에서는 테이블을 숨김 */
   }
 
+  .schedule-card {
+    display: block; /* 모바일에서 카드 내용 표시 */
+  }
+}
+
   /* 카드 형식으로 변경 */
   .schedule-section {
     display: grid;
