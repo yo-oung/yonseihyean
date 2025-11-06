@@ -435,3 +435,126 @@ a:focus {
     font-weight: bold;  /* 글씨 굵게 */
   }
 }
+
+<section class="schedule-section">
+  <div class="schedule-card">
+    <h3>월요일</h3>
+    <p>09:30 ~ 17:00</p>
+  </div>
+  <div class="schedule-card">
+    <h3>화요일</h3>
+    <p>09:30 ~ 19:00 (야간 진료)</p>
+  </div>
+  <div class="schedule-card">
+    <h3>수요일</h3>
+    <p>휴진</p>
+  </div>
+  <div class="schedule-card">
+    <h3>목요일</h3>
+    <p>09:30 ~ 17:00</p>
+  </div>
+  <div class="schedule-card">
+    <h3>금요일</h3>
+    <p>09:30 ~ 17:00</p>
+  </div>
+  <div class="schedule-card">
+    <h3>토요일</h3>
+    <p>09:30 ~ 14:00</p>
+  </div>
+  <div class="schedule-card">
+    <h3>일요일</h3>
+    <p>휴진</p>
+  </div>
+</section>
+
+<section class="schedule-section">
+  <div class="schedule-card">
+    <h3>월요일</h3>
+    <p>09:30 ~ 17:00</p>
+  </div>
+  <div class="schedule-card">
+    <h3>화요일</h3>
+    <p>09:30 ~ 19:00 (야간 진료)</p>
+  </div>
+  <div class="schedule-card">
+    <h3>수요일</h3>
+    <p>휴진</p>
+  </div>
+  <div class="schedule-card">
+    <h3>목요일</h3>
+    <p>09:30 ~ 17:00</p>
+  </div>
+  <div class="schedule-card">
+    <h3>금요일</h3>
+    <p>09:30 ~ 17:00</p>
+  </div>
+  <div class="schedule-card">
+    <h3>토요일</h3>
+    <p>09:30 ~ 14:00</p>
+  </div>
+  <div class="schedule-card">
+    <h3>일요일</h3>
+    <p>휴진</p>
+  </div>
+</section>
+
+/* ================================
+   기본 스케줄 테이블 (PC용)
+   ================================ */
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.schedule-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+  .schedule-card {
+    display: none; /* PC에서는 카드내용을 숨김 */
+  }
+
+/* ================================
+   모바일 전용: 카드 레이아웃으로 변경
+   ================================ */
+@media (max-width: 768px) {
+  .schedule-table {
+    display: none; /* 모바일에서는 테이블을 숨김 */
+  }
+
+  /* 카드 형식으로 변경 */
+  .schedule-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2개의 열로 그리드 배치 */
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .schedule-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .schedule-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .schedule-card p {
+    font-size: 14px;
+    color: #777;
+  }
+}
