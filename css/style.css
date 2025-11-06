@@ -470,31 +470,27 @@ a:focus {
 <section class="schedule-section">
   <div class="schedule-card">
     <h3>월요일</h3>
-    <p>09:30 ~ 17:00</p>
+    <p><br><br>정혜영 김소연<br>09:30 ~ 17:00</p>
   </div>
   <div class="schedule-card">
     <h3>화요일</h3>
-    <p>09:30 ~ 19:00 (야간 진료)</p>
+    <p>정혜영<br>09:30 ~ 17:00<br><br>김소연<br>09:30 ~ 19:00 (야간 진료)</p>
   </div>
   <div class="schedule-card">
     <h3>수요일</h3>
-    <p>휴진</p>
+    <p><br><br>휴진</p>
   </div>
   <div class="schedule-card">
     <h3>목요일</h3>
-    <p>09:30 ~ 17:00</p>
+    <p>정혜영<br>09:30 ~ 17:00<br><br>김소연<br>휴진</p>
   </div>
   <div class="schedule-card">
     <h3>금요일</h3>
-    <p>09:30 ~ 17:00</p>
+    <p>정혜영<br>09:30 ~ 13:00<br><br>김소연<br>09:30 ~ 17:00</p>
   </div>
   <div class="schedule-card">
     <h3>토요일</h3>
-    <p>09:30 ~ 14:00</p>
-  </div>
-  <div class="schedule-card">
-    <h3>일요일</h3>
-    <p>휴진</p>
+    <p><br><br>정혜영 김소연<br>격주 진료</p>
   </div>
 </section>
 
